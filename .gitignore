@@ -1,0 +1,5 @@
+/.idea/
+/nbproject/
+/.vagrant/
+/tmp/
+.DS_Store
