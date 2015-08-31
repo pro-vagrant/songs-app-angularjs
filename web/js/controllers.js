@@ -21,7 +21,7 @@ SongsApplication.config(['$routeProvider',
 
 SongsApplication.controller('SongsIndexCtrl', function($scope, $http) {
 
-    $http.get('data/songs.json').success(function(data) {
+    $http.get('/api/songs.json').success(function(data) {
         $scope.songs = data;
     });
 
@@ -31,7 +31,7 @@ SongsApplication.controller('SongShowCtrl', ['$scope', '$routeParams', '$http',
 
     function($scope, $routeParams, $http) {
 
-        $http.get('data/song/' + $routeParams.songId + '.json').success(function(data) {
+        $http.get('/api/song/' + $routeParams.songId + '.json').success(function(data) {
             $scope.song = data;
         });
 
