@@ -9,8 +9,8 @@ SongsApplication.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider
             .when('/show/song/:songId', {
-                templateUrl: 'abc',
-                controller: 'SongsShowCtrl'
+                templateUrl: 'SongShowTemplate',
+                controller: 'SongShowCtrl'
             })
             .when('/', {
                 redirectTo: '/show/song/1'
@@ -27,7 +27,7 @@ SongsApplication.controller('SongsIndexCtrl', function($scope, $http) {
 
 });
 
-SongsApplication.controller('SongsShowCtrl', ['$scope', '$routeParams', '$http',
+SongsApplication.controller('SongShowCtrl', ['$scope', '$routeParams', '$http',
 
     function($scope, $routeParams, $http) {
 
