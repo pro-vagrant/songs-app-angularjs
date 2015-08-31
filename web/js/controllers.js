@@ -8,12 +8,12 @@ var SongsApplication = angular.module('SongsApplication', ['ngRoute', 'ngSanitiz
 SongsApplication.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider
-            .when('/data/song/:songId', {
+            .when('/show/song/:songId', {
                 templateUrl: 'abc',
                 controller: 'SongsShowCtrl'
             })
             .when('/', {
-                redirectTo: '/data/song/1'
+                redirectTo: '/show/song/1'
             })
     }
 ]);
