@@ -10,7 +10,7 @@ SongsApplication.config(['$routeProvider',
         $routeProvider
             .when('/show/song/:songId', {
                 templateUrl: 'SongShowTemplate',
-                controller: 'SongShowCtrl'
+                controller: 'SongShowController'
             })
             .when('/', {
                 redirectTo: '/show/song/1'
@@ -19,7 +19,7 @@ SongsApplication.config(['$routeProvider',
 ]);
 
 
-SongsApplication.controller('SongsIndexCtrl', function($scope, $http) {
+SongsApplication.controller('SongIndexController', function($scope, $http) {
 
     $http.get('/api/songs.json').success(function(data) {
         $scope.songs = data;
@@ -27,7 +27,7 @@ SongsApplication.controller('SongsIndexCtrl', function($scope, $http) {
 
 });
 
-SongsApplication.controller('SongShowCtrl', ['$scope', '$routeParams', '$http',
+SongsApplication.controller('SongShowController', ['$scope', '$routeParams', '$http',
 
     function($scope, $routeParams, $http) {
 

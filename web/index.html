@@ -14,7 +14,7 @@
 <h1><a href="/">Songs for kids</a></h1>
 <h4>AngularJS application</h4>
 
-<nav ng-controller="SongsIndexCtrl">
+<nav ng-controller="SongIndexController">
     <ul>
         <li ng-repeat="song in songs">
             <a href="#/show/song/{{ song.id }}">{{ song.title }}</a>
